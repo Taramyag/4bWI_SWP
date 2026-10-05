@@ -1,0 +1,60 @@
+.main {
+    position: relative;
+    height: 300px;
+    width: 400px;
+    top: 20px;
+    left: 20px;
+    background-color: cyan;
+
+}
+
+.text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+
+.ueber {
+
+    margin: 0px;
+}
+
+.brown {
+    background-color: brown;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.violet {
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.yellow {
+    background-color: yellow;
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    position: absolute;
+    top: 370px;
+    left: 0px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.box {
+    background-color: limegreen;
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+}
