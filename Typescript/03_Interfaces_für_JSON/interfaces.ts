@@ -21,3 +21,4 @@ function printName(perso: Person) {
 }
 
 printName(person);
+
