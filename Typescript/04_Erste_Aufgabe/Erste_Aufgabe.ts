@@ -73,10 +73,14 @@ function getListofCars2(cars: Car[]): string[] {
     return cars.map(car => car.brand);
 }
 
+
+
+//nicht fertig
 function getExpensiveCars2(cars: Car[], minPrice: number): Car[] {
     return cars.filter(car => car.price > minPrice);
 }
 
 
+
 console.log(getTotalPrice(cars));
-console.log(getTotalPrice2(cars));     
+console.log(getTotalPrice2(cars));
