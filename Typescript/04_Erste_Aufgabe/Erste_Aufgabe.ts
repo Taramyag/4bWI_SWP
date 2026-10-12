@@ -40,26 +40,43 @@ const cars: Car[] = [
 function getTotalPrice(cars: Car[]): number {
     let sum = 0;
 
-    for (const car of cars) {
+    cars.forEach(car => {
         sum += car.price;
-    }
+    });
 
     return sum;
-};
+}
 
 function getListofCars(cars: Car[]): void {
-
-    for (const car of cars) {
-
-        console.log(cars);
-    }
-
-
-};
-
-function getExpensiveCars(cars: Car[], minprice: number) {
-    let value = 0;
-
-    read
+    cars.forEach(car => {
+        console.log(car);
+    });
 
 }
+
+function getExpensiveCars(cars: Car[], minPrice: number) {
+    minPrice = 5000;
+    cars.forEach(car => {
+        if (car.price > minPrice) {
+            console.log(car);
+        }
+    });
+}
+
+
+
+function getTotalPrice2(cars: Car[]): number {
+    return cars.reduce((sum, car) => sum + car.price, 0);
+}
+
+function getListofCars2(cars: Car[]): string[] {
+    return cars.map(car => car.brand);
+}
+
+function getExpensiveCars2(cars: Car[], minPrice: number): Car[] {
+    return cars.filter(car => car.price > minPrice);
+}
+
+
+console.log(getTotalPrice(cars));
+console.log(getTotalPrice2(cars));     
