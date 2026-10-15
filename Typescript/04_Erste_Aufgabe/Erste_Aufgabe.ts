@@ -54,13 +54,15 @@ function getListofCars(cars: Car[]): void {
 
 }
 
-function getExpensiveCars(cars: Car[], minPrice: number) {
+function getExpensiveCars(cars: Car[], minPrice: number): Car[] {
+    let mycars: Car[] = [];
     minPrice = 5000;
     cars.forEach(car => {
         if (car.price > minPrice) {
-            console.log(car);
+            mycars.push(car);
         }
     });
+    return mycars;
 }
 
 
@@ -69,13 +71,15 @@ function getTotalPrice2(cars: Car[]): number {
     return cars.reduce((sum, car) => sum + car.price, 0);
 }
 
+
+
 function getListofCars2(cars: Car[]): string[] {
     return cars.map(car => car.brand);
 }
 
 
 
-//nicht fertig
+
 function getExpensiveCars2(cars: Car[], minPrice: number): Car[] {
     return cars.filter(car => car.price > minPrice);
 }
@@ -84,3 +88,4 @@ function getExpensiveCars2(cars: Car[], minPrice: number): Car[] {
 
 console.log(getTotalPrice(cars));
 console.log(getTotalPrice2(cars));
+console.log(getExpensiveCars2(cars, 10000));

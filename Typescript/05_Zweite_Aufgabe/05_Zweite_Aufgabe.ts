@@ -26,6 +26,10 @@ function TotalArea(bundeslaender: Bundesland[]): number {
 
 }
 
+TotalArea(bundeslaender);
+
+
+
 function PperKM2(bundeslaender: Bundesland[]): string[] {
     return bundeslaender.map(a => {
         const dichte = a.einwohner / a.flaecheKm2;
@@ -33,16 +37,23 @@ function PperKM2(bundeslaender: Bundesland[]): string[] {
     });
 }
 
-//nicht fertig
-function Party(bundeslaender: Bundesland[]): number {
 
-    return bundeslaender.filter(e => e.einwohner > 14000);
+
+
+function myfilter(bundesland: Bundesland): boolean {
+    return bundesland.einwohner > 1400;
+}
+
+function Party(bundeslaender: Bundesland[]): Bundesland[] {
+
+    return bundeslaender.filter(myfilter);
 }
 
 
+function sortBundeslaender(bundeslaender: Bundesland[]): Bundesland[] {
+    return bundeslaender.sort((bundeslandA, bundeslandB) => bundeslandB.flaecheKm2 - bundeslandA.flaecheKm2);
+}
 
-//sort fehlt noch
 
-//console.log(TotalArea(bundeslaender));
 
 
